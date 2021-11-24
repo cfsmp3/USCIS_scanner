@@ -115,6 +115,20 @@ def get_case_type_and_step_from_body(body):
         step = "DuplicateNoticeSent"
     elif ", we began reviewing your " in body:
         step = "ReviewStarted"
+    elif "we sent a request for initial evidence for your" in body:
+        step = "RFIF_sent"
+    elif "we received your request to withdraw your" in body:
+        step = "WithdrawalRequestReceived"
+    elif "we rescheduled an interview for your" in body:
+        step = "InterviewRescheduled"
+    elif "we requested that certain people associated with your" in body and "come to an appointment." in body and "No one came to the appointment, and this will significantly affect your case." in body:
+        step = "AppointmentMissed"
+    elif "we reopened" in body and "If you do not receive your reopening notice" in body:
+        step = "FormReopened"
+    elif "We mailed your document for your" in body:
+        step = "DocumentMailed"
+    elif "we transferred your" in body and "to another USCIS office." in body:
+        step = "FormTransferred"
     return form, step
 
 

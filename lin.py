@@ -260,7 +260,7 @@ form_cases = cases["case_types"][form]
 form_stats = Counter()
 unparsed_bodies = []
 for idx, case in enumerate(form_cases):
-    print(f"[{idx+1} / {len(form_cases)}: {case}")
+    print(f"[{idx+1} / {len(form_cases)}]: {case}")
     status = get_case_info(case)
     if not status:
         print("Couldn't get status, skipping this case")

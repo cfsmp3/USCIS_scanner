@@ -236,8 +236,8 @@ print(state_dir)
 
 valid_cases = path.join(state_dir, "cases.json")
 form_counter_file = path.join(state_dir, f"{form}_counter.json")
-form_counter_file_previous = path.join(state_dir, "{form}_counter_previous.json")
-form_diff_file_previous = path.join(state_dir, "{form}_diff.json")
+form_counter_file_previous = path.join(state_dir, f"{form}_counter_previous.json")
+form_diff_file_previous = path.join(state_dir, f"{form}_diff.json")
 known_states = {}
 
 Path(state_dir).mkdir(parents=True, exist_ok=True)

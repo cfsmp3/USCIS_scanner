@@ -13,3 +13,24 @@ Then, for a specific form type, it will break down the current status and compar
 
 So you can, for your specific date and case type, get an idea of where you stand and how fast, or slow, things are moving.
 
+## Instructions
+You need to have Python and Pip installed first.
+https://realpython.com/installing-python/#how-to-install-python-on-windows
+
+Then from the command line, navigate to this folder and run:
+```
+pip install -r requirements.txt
+```
+
+And then, for example to find all cases in LIN21111 batch, run:
+```
+python ./lin.py --case LIN21111XXXXX
+```
+
+You can add arguments like follows:
+```
+    "--case": "Reference case number, used to extract date to process.", default="LIN21111XXXXX",
+    "--form","Form type we care about when updating current state",default="I-485",
+    "-u","Go over the list of Unknown events and try to process them again (useful only if there's been changes in code)",default="False"
+```
+

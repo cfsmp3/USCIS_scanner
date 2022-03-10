@@ -129,6 +129,8 @@ def get_case_type_and_step_from_body(body):
         step = "DocumentMailed"
     elif "we transferred your" in body and "to another USCIS office." in body:
         step = "FormTransferred"
+    elif "was transferred to another USCIS office" in body:
+        step = "FormTransferred"
     return form, step
 
 

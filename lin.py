@@ -131,6 +131,10 @@ def get_case_type_and_step_from_body(body):
         step = "FormTransferred"
     elif "was transferred to another USCIS office" in body:
         step = "FormTransferred"
+    elif "we scheduled an interview" in body:
+        step = "InterviewScheduled"
+    elif "we mailed a request for initial and additional evidence" in body:
+        step = "RequestForLotsOfEvidence"
     return form, step
 
 
